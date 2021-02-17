@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\GrabberController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/',[GrabberController::class,'getTheGrabberGit'])->name("getTheGrabberGit");
+Route::post('/',[GrabberController::class,'cloneRepo'])->name("cloneRepo");
