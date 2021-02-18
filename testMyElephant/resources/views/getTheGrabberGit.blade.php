@@ -1,5 +1,5 @@
 <p>hello world</p>
-
+<a href="{{route("getDeletter")}}">netoyeur de doss</a>
 
 <form method="post" action="{{route('cloneRepo')}}">
     @csrf

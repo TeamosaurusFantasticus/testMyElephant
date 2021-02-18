@@ -15,4 +15,9 @@ use App\Http\Controllers\GrabberController;
 
 
 Route::get('/',[GrabberController::class,'getTheGrabberGit'])->name("getTheGrabberGit");
+
 Route::post('/',[GrabberController::class,'cloneRepo'])->name("cloneRepo");
+
+Route::get('delete',[GrabberController::class,'getDeletter'])->name('getDeletter');
+
+Route::delete('delete',[GrabberController::class,'deleteProject'])->name("deleteRepo");
