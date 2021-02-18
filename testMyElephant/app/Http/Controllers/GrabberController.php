@@ -17,7 +17,7 @@ class GrabberController extends Controller
     public function cloneRepo(Request $request){
         $path = "allRepo/".$request->namerepo;
         $repo = GitRepository::cloneRepository($request->repo, $path);
-        ddd($repo);
+
     }
 
 
@@ -27,27 +27,9 @@ class GrabberController extends Controller
 
 
     public function deleteProject(Request $request){
-     //   $files = glob($dirname.'/*');
-     /*     foreach($files as $file) {
-            if(is_file($file))
-                // Delete the given file
-                unlink($file);
-        }*/
 
-        $dirname =   'public/allRepo/'.$request->repoToDelete;
+        $dirname =   'allRepo/'.$request->repoToDelete;
 
-        $cmd = "rmdir /s /q ";
+        exec("rm -rf $dirname");
 
-        shell_exec('rmdir /s /q "public/allRepo/hellow"');
-
-
-//       if(  ){
-//            echo "succes";
-//        }
-//        else
-//        {
-//           echo "fail";
-//        }
-
-    }
 }
