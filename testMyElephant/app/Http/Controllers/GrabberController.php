@@ -26,10 +26,11 @@ class GrabberController extends Controller
     }
 
 
-    public function deleteProject(Request $request){
+    public function deleteProject(Request $request)
+    {
 
-        $dirname =   'allRepo/'.$request->repoToDelete;
+        $dirname = 'allRepo/' . $request->repoToDelete;
 
         exec("rm -rf $dirname");
-
+    }
 }
