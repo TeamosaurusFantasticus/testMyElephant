@@ -13,14 +13,16 @@ class CreateReposTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->uuid();
+        Schema::create('repos', function (Blueprint $table) {
+            $table->id();
             $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('url');
+            $table->string('scanRapport');
             $table->timestamps();
+        });
+        Schema::table('repos', function (Blueprint $table) {
+            $table->unsignedBigInteger('id_user_repo');
+            $table->foreign('id_user_repo')->references('id')->on('users')->onDelete('cascade');;
         });
     }
 
