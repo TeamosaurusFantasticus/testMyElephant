@@ -10,17 +10,21 @@ class RepositoryController extends Controller
 {
     //show
     public function showRepositories(){
-       $repositories =  Repo::all()->where(Auth::id_user_repo);
-       return view('showUserRepositories', ["repositories = $repositories"]);
+       $repositories =  Repo::all()->where(Auth::user()->id_user_repo);
+       ddd($repositories);
+       return view('showUserRepositories', ["repositories" => $repositories]);
     }
 
     //create
-//    public function storeRepository(Request $request)
-//    {
-//        $newRepo = new Repo();
-//        $request->name = $newRepo->name;
-//        $request->url = $newRepo->url;
-//    }
+    public function storeRepository(Request $request)
+    {
+        $newRepo = new Repo();
+        $newRepo->name =  $request->repositoryName ;
+        $newRepo->url = $request->repositoryURL;
+        $newRepo->scanRapport = $request->scanRapport;
+        $newRepo->id_user_repo =  Auth::user()->id;
+        $newRepo->save();
+    }
 
     /*
 
@@ -34,5 +38,8 @@ class RepositoryController extends Controller
         unsignedBigInteger('
     ');
           foreign('id_user_repo')->references('id')->on('users')->onDelete('cascade');
+
+
+
      */
 }
