@@ -11,4 +11,6 @@ testMyElephant/Homestead.json
 testMyElephant/Homestead.yaml
 testMyElephant/npm-debug.log
 testMyElephant/yarn-error.log
+testMyElephant/composer.lock
+testMyElephant/package-lock.json
 .idea/

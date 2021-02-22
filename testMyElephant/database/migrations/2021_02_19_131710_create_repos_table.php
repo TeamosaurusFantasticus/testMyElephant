@@ -20,9 +20,10 @@ class CreateReposTable extends Migration
             $table->string('scanRapport');
             $table->timestamps();
         });
+
         Schema::table('repos', function (Blueprint $table) {
             $table->unsignedBigInteger('id_user_repo');
-            $table->foreign('id_user_repo')->references('id')->on('users')->onDelete('cascade');;
+            $table->foreign('id_user_repo')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
