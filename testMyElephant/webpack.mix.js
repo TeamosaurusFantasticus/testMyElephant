@@ -1,7 +1,5 @@
 const mix = require('laravel-mix');
-require('postcss-import'),
-        require('tailwindcss'),
-        require('autoprefixer');
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -15,8 +13,9 @@ require('postcss-import'),
 
 mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
-
-        //
+        require('postcss-import'),
+        require('tailwindcss'),
+        require('autoprefixer')
     ])
     .copy("resources/assets", "public/images")
     ;
