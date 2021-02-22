@@ -17,7 +17,7 @@ class GrabberController extends Controller
     public function cloneRepo(Request $request){
         $path = "allRepo/".$request->namerepo;
         $repo = GitRepository::cloneRepository($request->repo, $path);
-
+        return view("getTheGrabberGit");
     }
 
 
