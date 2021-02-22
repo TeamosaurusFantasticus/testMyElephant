@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RepositoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GrabberController;
 /*
@@ -27,3 +28,5 @@ Route::delete('delete',[GrabberController::class,'deleteProject'])->name("delete
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('/profile/showUserRepositories', [RepositoryController::class, 'showRepositories'])->name('showUserRepositories');
