@@ -1,4 +1,5 @@
 
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
 
 body{
@@ -84,3 +85,8 @@ body{
     box-shadow: -4px 5px 4px -4px #000000;
     font-family: 'Nunito', sans-serif, bold;
 }
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+

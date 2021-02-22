@@ -9,6 +9,7 @@
 </head>
 <body>
 
+
 <div class="home">
 
 
@@ -16,6 +17,7 @@
     <div class="sections">
         <div class="formSection">
             <a href="{{route("getDeletter")}}">Suppression de repository</a>
+            <a href="{{route("login")}}">Login</a>
 
             <form class="formCloneRepo" method="post" action="{{route('cloneRepo')}}">
                 @csrf
@@ -36,3 +38,4 @@
 
 </body>
 </html>
+
