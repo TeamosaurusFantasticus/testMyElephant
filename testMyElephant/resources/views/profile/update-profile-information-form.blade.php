@@ -1,10 +1,15 @@
-<x-jet-form-section submit="updateProfileInformation">
+<x-jet-form-section submit="updateProfileInformation" >
+
     <x-slot name="title">
-        {{ __('Profile Information') }}
+        <div class="white">
+            {{ __('Profile Information') }}
+        </div>
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Update your account\'s profile information and email address.') }}
+        <div class="white">
+            {{ __('Update your account\'s profile information and email address.') }}
+        </div>
     </x-slot>
 
     <x-slot name="form">
