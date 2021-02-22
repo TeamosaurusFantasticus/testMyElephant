@@ -29,4 +29,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::get('/profile/showUserRepositories', [RepositoryController::class, 'showRepositories'])->name('showUserRepositories');
+Route::get('/showUserRepositories', [RepositoryController::class, 'showRepositories'])->name('showUserRepositories');
