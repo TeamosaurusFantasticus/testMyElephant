@@ -9,6 +9,7 @@ body{
     font-family: 'Nunito', sans-serif;
 }
 .home{
+    position: absolute;
     margin: auto auto auto auto;
     background-image: url("../assets/BG1tme.jpg");
     background-repeat: no-repeat;
@@ -25,14 +26,16 @@ body{
 .sections {
     display: flex;
     flex-direction: row;
+
 }
 
 .formSection{
     display: flex;
     flex-direction: column;
     background-color: white;
+
     /* margin: auto; */
-    margin: auto auto auto 15vw;
+    /* margin: auto auto auto 15vw; */
     border-radius: 5px;
     padding: 20px;
     max-width: 250px;
@@ -84,6 +87,61 @@ body{
     -webkit-box-shadow: -4px 5px 4px -4px #000000;
     box-shadow: -4px 5px 4px -4px #000000;
     font-family: 'Nunito', sans-serif, bold;
+}
+
+.logo_homePage{
+    position: relative;
+    background-image: url("../assets/logo_testMyElephant_white.png");
+    background-attachment: center;
+    background-size: 100%;
+    height: 280px;
+    width: 310px;
+    /* margin: 100px auto auto 300px; */
+}
+.leftSide{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15vw;
+    margin-top: -100px;
+}
+
+.navbar_auth{
+    position: fixed;
+    display: flex;
+    color: white;
+    flex-direction: row;
+    justify-content: right;
+    right: 0;
+    margin: 20px 30px auto auto;
+
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.largeFont{
+    font-size: 2àpx;
+}
+
+
+
+.loginPage{
+    background-image: url("../assets/BG2tme.jpg");
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position-x: center;
+    background-size: 100%;
+}
+.bg-gray-100{
+    background-image: url("../assets/BG2tme.jpg");
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position-x: center;
+    background-size: 100%;
 }
 
 @import 'tailwindcss/base';
