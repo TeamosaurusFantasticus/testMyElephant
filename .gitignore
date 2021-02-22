@@ -14,3 +14,6 @@ testMyElephant/yarn-error.log
 testMyElephant/composer.lock
 testMyElephant/package-lock.json
 .idea/
+testMyElephant/public/css
+testMyElephant/public/images
+testMyElephant/public/js
