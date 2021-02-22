@@ -22,9 +22,13 @@
             <form class="formCloneRepo" method="post" action="{{route('cloneRepo')}}">
                 @csrf
                 <h3>Veuillez rentrer l'url de votre repository Github ainsi qu'un nom à lui donner !</h3>
-                <input type="text" name="repo" placeholder="URL du repository à examiner">
+                <input type="text" name="repositoryURL" placeholder="URL du repository à examiner">
                 <div class="line"></div>
-                <input  type="text" name="namerepo" placeholder="Nom à donner à votre repository">
+
+                <input  type="text" name="repositoryName" placeholder="Nom à donner à votre repository">
+                <div class="line"></div>
+
+                <input  type="text" name="scanRapport" value="Toto">
                 <div class="line"></div>
                 <button class="btn" type="submit">Cloner </button>
             </form>
