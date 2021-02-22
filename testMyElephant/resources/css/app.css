@@ -98,6 +98,17 @@ body{
     width: 310px;
     /* margin: 100px auto auto 300px; */
 }
+
+.logo_black{
+    position: relative;
+    background-image: url("../assets/logo_testMyElephant_black.png");
+    background-attachment: center;
+    background-size: 100%;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    /* margin: 100px auto auto 300px; */
+}
 .leftSide{
 
     display: flex;
@@ -128,7 +139,6 @@ body{
 }
 
 
-
 .loginPage{
     background-image: url("../assets/BG2tme.jpg");
     background-repeat: no-repeat;
@@ -142,6 +152,11 @@ body{
     background-attachment:fixed;
     background-position-x: center;
     background-size: 100%;
+}
+
+.white{
+    color:white;
+    font-weight: 900;
 }
 
 @import 'tailwindcss/base';
