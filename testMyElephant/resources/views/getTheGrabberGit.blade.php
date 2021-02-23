@@ -19,9 +19,16 @@
                     @csrf
                     <h3 class="bold largeFont">Veuillez entrer l'url de votre repository Github ainsi qu'un nom à lui donner !</h3>
                     <input type="text" name="repo" placeholder="URL du repository à examiner">
+
                     <div class="line"></div>
-                    <input  type="text" name="namerepo" placeholder="Nom à donner à votre repository">
+
+                    <input  type="text" name="repositoryName" placeholder="Nom à donner à votre repository">
                     <div class="line"></div>
+
+                    {{--TODO rendre nullable la colonne scanRapport en DB et enlever l'input scanRapport ci-dessous--}}
+                    <input  type="text" name="scanRapport" value="Toto">
+                    <div class="line"></div>
+
                     <button class="btn" type="submit">Cloner </button>
                 </form>
             </div>
