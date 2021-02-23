@@ -1,21 +1,21 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="/">
-                        <div class="logo_black"></div>
+                    <a href="{{route('getTheGrabberGit')}}">
+                        <div class="logo_white"></div>
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
-                </div>
+                </div> --}}
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -35,7 +35,7 @@
                                 </span>
                             </x-slot>
 
-                            <x-slot name="content">
+                            {{-- <x-slot name="content">
                                 <div class="w-60">
                                     <!-- Team Management -->
                                     <div class="block px-4 py-2 text-xs text-gray-400">
@@ -64,13 +64,13 @@
                                         <x-jet-switchable-team :team="$team" />
                                     @endforeach
                                 </div>
-                            </x-slot>
+                            </x-slot> --}}
                         </x-jet-dropdown>
                     </div>
                 @endif
-
+                @include("Components.Navbar")
                 <!-- Settings Dropdown -->
-                <div class="ml-3 relative">
+                {{-- <div class="ml-3 relative">
                     <x-jet-dropdown align="right" width="48">
                         <x-slot name="trigger">
                             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
@@ -120,7 +120,7 @@
                             </form>
                         </x-slot>
                     </x-jet-dropdown>
-                </div>
+                </div> --}}
             </div>
 
             <!-- Hamburger -->

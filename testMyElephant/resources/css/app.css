@@ -110,6 +110,17 @@ body{
     margin-top: 20px;
     /* margin: 100px auto auto 300px; */
 }
+
+.logo_white{
+    position: relative;
+    background-image: url("../assets/logo_testMyElephant_white.png");
+    background-attachment: center;
+    background-size: 100%;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    /* margin: 100px auto auto 300px; */
+}
 .leftSide{
 
     display: flex;
@@ -125,6 +136,7 @@ body{
 }
 
 .navbar_display{
+
     position: fixed;
     display: flex;
     color: white;
@@ -154,14 +166,26 @@ body{
     background-image: url("../assets/BG2tme.jpg");
     background-repeat: no-repeat;
     background-attachment:fixed;
-    background-position-x: center;
+    background-position: bottom;
     background-size: 100%;
 }
 
 
+#allContent{
+    width: 70vw;
+    margin: auto;
+}
 
+.menuBG{
+    margin-top: -20px;
+    /* background: rgb(79,91,147);
+    background: linear-gradient(90deg, rgba(79,91,147,0) 0%, rgba(0,0,0,0.32264243588060226) 74%, rgba(0,0,0,0) 99%);
+    background-color: black; */
+}
 
-
+.logout{
+    margin-right: 5px;
+}
 
 body input + label {
     position: fixed;
@@ -179,6 +203,7 @@ body input + label span {
     margin-top: -1px;
     left: 0;
     display: block;
+    opacity: 1;
     background: white;
     transition: 0.5s;
 }
@@ -193,14 +218,17 @@ body label:hover {
 }
 body input:checked + label span {
     opacity: 0;
+    display: none;
     top: 50%;
 }
 body input:checked + label span:first-child {
     opacity: 1;
+    display: block;
     transform: rotate(405deg);
 }
 body input:checked + label span:last-child {
     opacity: 1;
+    display: block;
     transform: rotate(-405deg);
 }
 body input ~ nav {
@@ -224,6 +252,7 @@ body input ~ nav > ul {
 }
 body input ~ nav > ul > li {
     opacity: 0;
+    display: none;
     transition: 0.5s;
     transition-delay: 0s;
 }
@@ -233,8 +262,9 @@ body input ~ nav > ul > li > a {
     color: white;
     font-weight: 700;
     font-family: 'Nunito', sans-serif;
+    opacity: 1;
     display: block;
-    padding: 30px;
+    padding: 5px;
 }
 body input:checked ~ nav {
     height: 100%;
@@ -242,12 +272,17 @@ body input:checked ~ nav {
 }
 body input:checked ~ nav > ul > li {
     opacity: 1;
+    display: block;
     transition-delay: 0.5s;
 }
 
 .menu{
     display: flex;
     flex-direction: column;
+}
+
+.white {
+    color: white;
 }
 
 @import 'tailwindcss/base';

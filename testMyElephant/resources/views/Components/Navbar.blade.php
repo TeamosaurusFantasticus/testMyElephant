@@ -33,10 +33,30 @@
     </label>
 
     <nav>
-      <ul>
+      <ul class="menuBG" >
         <li><a class="bold" href="{{route("login")}}">About</a></li>
-        <li><a class="bold" href="{{route("login")}}">Login</a></li>
-        <li><a class="bold" href="{{route("register")}}">Register</a></li>
+        @if (Illuminate\Support\Facades\Auth::check() == false)
+            <li><a class="bold" href="{{route("login")}}">Login</a></li>
+            <li><a class="bold" href="{{route("register")}}">Register</a></li>
+        @endif
+        @if (Illuminate\Support\Facades\Auth::check())
+            <li><a class="bold" href="{{route("profile.show")}}">{{ __('Profile') }}</a></li>
+            <li><a class="bold" href="{{route("dashboard")}}">{{ __('Dashboard') }}</a></li>
+            <li>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a class="bold logout" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+                        LOG OUT
+                    </a>
+                </form>
+            </li>
+        @endif
+
+        @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
+            <li><a class="bold" href="{{ route('api-tokens.index') }}">{{ __('API Tokens') }}</a></li>
+        @endif
       </ul>
     </nav>
  </div>

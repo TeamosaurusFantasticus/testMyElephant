@@ -56,7 +56,7 @@
                 </form>
             </x-jet-authentication-card>
         </x-guest-layout>
-
+        @include("Components.Navbar")
     </div>
 
 </body>
