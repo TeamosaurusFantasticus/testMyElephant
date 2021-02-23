@@ -1,10 +1,14 @@
 <x-jet-action-section>
     <x-slot name="title">
-        {{ __('Delete Account') }}
+        <div class="white">
+            {{ __('Delete Account') }}
+        </div>
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Permanently delete your account.') }}
+        <div class="white">
+            {{ __('Permanently delete your account.') }}
+        </div>
     </x-slot>
 
     <x-slot name="content">
