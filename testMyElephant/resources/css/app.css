@@ -1,6 +1,7 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300');
 
 body{
     top: 0px;
@@ -119,15 +120,18 @@ body{
     margin-top: -100px;
 }
 
-.navbar_auth{
+.navbar_hidden{
+    display: none;
+}
+
+.navbar_display{
     position: fixed;
     display: flex;
     color: white;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: right;
     right: 0;
     margin: 20px 30px auto auto;
-
 }
 
 .bold {
@@ -154,9 +158,96 @@ body{
     background-size: 100%;
 }
 
-.white{
-    color:white;
-    font-weight: 900;
+
+
+
+
+
+body input + label {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    height: 20px;
+    width: 15px;
+    z-index: 5;
+}
+body input + label span {
+    position: absolute;
+    width: 120%;
+    height: 3px;
+    top: 50%;
+    margin-top: -1px;
+    left: 0;
+    display: block;
+    background: white;
+    transition: 0.5s;
+}
+body input + label span:first-child {
+    top: 3px;
+}
+body input + label span:last-child {
+    top: 16px;
+}
+body label:hover {
+    cursor: pointer;
+}
+body input:checked + label span {
+    opacity: 0;
+    top: 50%;
+}
+body input:checked + label span:first-child {
+    opacity: 1;
+    transform: rotate(405deg);
+}
+body input:checked + label span:last-child {
+    opacity: 1;
+    transform: rotate(-405deg);
+}
+body input ~ nav {
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 3;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    overflow: hidden;
+}
+body input ~ nav > ul {
+    text-align: right;
+    position: absolute;
+    top: 15%;
+    /* left: 20%; */
+    right: 1%;
+}
+body input ~ nav > ul > li {
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+body input ~ nav > ul > li > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    display: block;
+    padding: 30px;
+}
+body input:checked ~ nav {
+    height: 100%;
+    transition-delay: 0s;
+}
+body input:checked ~ nav > ul > li {
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
 }
 
 @import 'tailwindcss/base';
