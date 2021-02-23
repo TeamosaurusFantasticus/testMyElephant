@@ -33,6 +33,10 @@ class RepositoryController extends Controller
 
     //delete
 //    TODO suppression APRÈS scan et envoie du rapport
+    public function deleteRepository($id){
+         Repo::where('id',$id)->firstorfail()->delete();
+         return back();
+    }
 
     /*
       $profile_photo_path = '/img/imgIconeUser/'.time().'.'.$userRequest->profile_photo_path->extension();
