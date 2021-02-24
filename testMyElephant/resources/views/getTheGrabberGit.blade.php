@@ -7,7 +7,7 @@
     <title>testMyElephant</title>
     <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}" >
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" >
-    <link rel="stylesheet" type="text/css" href="{{asset("vendor/cookie-consent/css/cookie-consent.css")}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset("vendor/cookie-consent/css/cookie-consent.css") }}">
 </head>
 <body>
     <div class="home">
@@ -18,7 +18,7 @@
                 <form class="formCloneRepo" method="post" action="{{route('cloneRepo')}}">
                     @csrf
                     <h3 class="bold largeFont">Veuillez entrer l'url de votre repository Github ainsi qu'un nom à lui donner !</h3>
-                    <input type="text" name="repo" placeholder="URL du repository à examiner">
+                    <input type="text" name="repositoryURL" placeholder="URL du repository à examiner">
 
                     <div class="line"></div>
 
