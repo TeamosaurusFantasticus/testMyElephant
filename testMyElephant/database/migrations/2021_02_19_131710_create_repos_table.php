@@ -17,6 +17,7 @@ class CreateReposTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('url');
+//            TODO passer scanRapport en Nullable
             $table->string('scanRapport');
             $table->timestamps();
         });
