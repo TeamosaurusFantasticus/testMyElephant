@@ -11,20 +11,12 @@
     </thead>
     <tbody>
 
-{{--    <form action="{{route('REPO')}}" method="get">--}}
-{{--        @csrf--}}
-{{--        <button type="submit">Créer un nouveau repo</button>--}}
-{{--    </form>--}}
-
-
     @foreach($repositories as $repository)
         <tr>
             <th>{{ $repository->id }}</th>
             <td>{{ $repository->name }}</td>
             <td>{{ $repository->url }}</td>
             <td>{{ $repository->scanRapport }}</td>
-
-{{--            <td><a href="{{route('REPO', $repository->id)}}">Modifier</a></td>--}}
             <td>
                 <form action="{{ route('deleteRepository', $repository->id) }}" method="post">
                     @csrf
@@ -35,6 +27,5 @@
         </tr>
 
     @endforeach
-
     </tbody>
 </table>

@@ -29,6 +29,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+
+//Show one's repositories
 Route::get('/showUserRepositories', [RepositoryController::class, 'showRepositories'])->name('showUserRepositories');
 
+//Delete one's repository in DB
 Route::delete('/showUserRepositories/{id}',[RepositoryController::class, 'deleteRepository'] )->name('deleteRepository');
+

@@ -38,16 +38,4 @@ class RepositoryController extends Controller
          return back();
     }
 
-    /*
-      $profile_photo_path = '/img/imgIconeUser/'.time().'.'.$userRequest->profile_photo_path->extension();
-            $userRequest->profile_photo_path->move(public_path('/img/imgIconeUser'), $profile_photo_path);
-            id();
-            string('name');
-            string('url');
-            string('scanRapport');
-           timestamps();
-        unsignedBigInteger('
-    ');
-          foreign('id_user_repo')->references('id')->on('users')->onDelete('cascade');
-     */
 }
