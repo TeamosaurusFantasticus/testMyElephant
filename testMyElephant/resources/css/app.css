@@ -236,7 +236,7 @@ body input ~ nav {
     position: fixed;
     top: 0;
     right: 30px;
-    width: 100px;
+    width: 130px;
     height: 100px;
     z-index: 3;
     transition: 0.5s;
