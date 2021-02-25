@@ -7,7 +7,7 @@
     <title>testMyElephant</title>
     <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}" >
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" >
-    <link rel="stylesheet" type="text/css" href="{{asset("vendor/cookie-consent/css/cookie-consent.css")}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset("vendor/cookie-consent/css/cookie-consent.css") }}">
 </head>
 <body>
     <div class="home">
