@@ -20,7 +20,7 @@ class GrabberController extends Controller
 // cloneRepo() clones a repository in a local directory named by the user then calls scanRepo()
     public function cloneRepo(Request $request){
         $path = "allRepo/".$request->repositoryName;
-        $repo = GitRepository::cloneRepository($request->repositoryURL, $path);
+        GitRepository::cloneRepository($request->repositoryURL, $path);
         if(!empty(Auth::user()->id)){
             $newRepositoryController = new RepositoryController;
             $newRepositoryController->storeRepository($request);
