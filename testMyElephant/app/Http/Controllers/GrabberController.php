@@ -34,20 +34,15 @@ class GrabberController extends Controller
 // scanRepo() provides an array of all security issues found by ProgPilot
     public function scanRepo($path){
         exec("./../vendor/bin/progpilot $path", $output);
-        ddd($output);
+        $this->deleteRepo($path);
+    }
+
+// deleteRepo() suppress a local repository after scan
+    public function deleteRepo($path){
+        exec("rm -rf $path");
     }
 
 //TODO processing ProgPilot report
-//TODO delete repo after scanning
 //TODO create a class that calls every method needed for our repository scanning process called xxxService
 
-    public function getDeletter(){
-        return view('getDeletter');
-    }
-
-    public function deleteProject(Request $request)
-    {
-        $dirname = 'allRepo/' . $request->repoToDelete;
-        exec("rm -rf $dirname");
-    }
 }
