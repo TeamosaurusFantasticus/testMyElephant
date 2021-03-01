@@ -4,8 +4,7 @@
             <th scope="col">#id</th>
             <th scope="col">Nom</th>
             <th scope="col">URL</th>
-            <th scope="col">Rapport</th>
-            <th scope="col">Update</th>
+            <th scope="col">Scanner</th>
             <th scope="col">Delete</th>
         </tr>
     </thead>
@@ -16,7 +15,6 @@
             <th>{{ $repository->id }}</th>
             <td>{{ $repository->name }}</td>
             <td>{{ $repository->url }}</td>
-{{--            <td>{{ $repository->scanRapport }}</td>--}}
             <td>
                 <form action="{{ route('scanRepo', $repository->name) }}" method="post">
                     @csrf
