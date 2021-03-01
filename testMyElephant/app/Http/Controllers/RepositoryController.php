@@ -18,7 +18,6 @@ class RepositoryController extends Controller
     }
 
     //create
-//    TODO ceinture de sécurité soit la création marche en DB ET local soit elle est abort (=suppression)
     public function storeRepository(Request $request)
     {
         $newRepo = new Repo();
@@ -30,10 +29,8 @@ class RepositoryController extends Controller
 
 
     //delete
-//    TODO suppression APRÈS scan et envoie du rapport
     public function deleteRepository($id){
          Repo::where('id',$id)->firstorfail()->delete();
          return back();
     }
-
 }
