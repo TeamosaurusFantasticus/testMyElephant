@@ -26,10 +26,6 @@
                     <input  type="text" name="repositoryName" placeholder="Choisissez un nom">
                     <div class="line"></div>
 
-                    {{--TODO rendre nullable la colonne scanRapport en DB et enlever l'input scanRapport ci-dessous--}}
-                    <input  type="text" name="scanRapport" value="Toto">
-                    <div class="line"></div>
-
                     <button class="btn" type="submit">Cloner </button>
                 </form>
             </div>
