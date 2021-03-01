@@ -24,8 +24,6 @@ class RepositoryController extends Controller
         $newRepo = new Repo();
         $newRepo->name =  $request->repositoryName ;
         $newRepo->url = $request->repositoryURL;
-//        TODO ne pas créer automatiquement un scanRapport au clonage d'un repo
-        $newRepo->scanRapport = $request->scanRapport;
         $newRepo->id_user_repo =  Auth::user()->id;
         $newRepo->save();
     }
