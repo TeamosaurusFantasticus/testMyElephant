@@ -38,22 +38,10 @@ class GrabberController extends Controller
 // scanRepo() provides an array of all security issues found by ProgPilot
     public function scanRepo($path){
         //$path = "allRepo/$repositoryName";
-
         exec("./../vendor/bin/progpilot $path", $output);
-        //$this->deleteRepo($path);
+        $this->deleteRepo($path);
         return view("scanner", ["resultscan"=>$output]);
-
     }
-
-
-//Fonction scanRepo pré-refactor
-//    public function scanRepo($repositoryName){
-//         $path = "allRepo/$repositoryName";
-//        exec("./../vendor/bin/progpilot $path", $output);
-//        //$this->deleteRepo($path);
-//        return view("scanner", ["resultscan"=>$output]);
-//
-//    }
 
 // deleteRepo() suppress a local repository after scan
     public function deleteRepo($path){
