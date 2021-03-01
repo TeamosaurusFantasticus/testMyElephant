@@ -19,11 +19,8 @@ Route::get('/',[GrabberController::class,'getTheGrabberGit'])->name("getTheGrabb
 
 Route::post('/',[GrabberController::class,'cloneRepo'])->name("cloneRepo");
 
-Route::get('delete',[GrabberController::class,'getDeletter'])->name('getDeletter');
 
 ///*Route::get('login',[Authentification::class,'login'])->name("login");*/
-
-Route::delete('delete',[GrabberController::class,'deleteProject'])->name("deleteRepo");
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

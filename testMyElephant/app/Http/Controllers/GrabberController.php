@@ -17,32 +17,44 @@ class GrabberController extends Controller
         return view("getTheGrabberGit");
     }
 
+// cloneRepo() clones a repository in a local directory named by the user then calls scanRepo()
     public function cloneRepo(Request $request){
         $path = "allRepo/".$request->repositoryName;
-        $repo = GitRepository::cloneRepository($request->repositoryURL, $path);
+        GitRepository::cloneRepository($request->repositoryURL, $path);
         if(!empty(Auth::user()->id)){
             $newRepositoryController = new RepositoryController;
             $newRepositoryController->storeRepository($request);
             $newRepositoryController->showRepositories();
         }
+
+        $this->scanRepo($path);
         return view("getTheGrabberGit");
     }
 
 // scanRepo() provides an array of all security issues found by ProgPilot
+
     public function scanRepo($repositoryName){
          $path = "allRepo/$repositoryName";
         exec("./../vendor/bin/progpilot $path", $output);
         //$this->deleteRepo($path);
         return view("scanner", ["resultscan"=>$output]);
+
     }
 
-    public function getDeletter(){
-        return view('getDeletter');
+// deleteRepo() suppress a local repository after scan
+    public function deleteRepo($path){
+        exec("rm -rf $path");
     }
+
 
     public function deleteProject(Request $request)
     {
         $dirname = 'allRepo/' . $request->repoToDelete;
         exec("rm -rf $dirname");
     }
+
+//TODO processing ProgPilot report
+//TODO create a class that calls every method needed for our repository scanning process called xxxService
+
+
 }
