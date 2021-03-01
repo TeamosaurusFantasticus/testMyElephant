@@ -19,15 +19,20 @@ use App\Http\Controllers\GrabberController;
 Route::get('/',[GrabberController::class,'getTheGrabberGit'])->name("getTheGrabberGit");
 
 //Register a repository in DB
-Route::post('/registerRepo', [RepositoryController::class, 'registerRepositoryInDB'])->name('registerRepositoryInDB');
+Route::post('/showUserRepositories', [RepositoryController::class, 'registerRepositoryInDB'])->name('registerRepositoryInDB');
+
+//Show one's repositories
+Route::get('/showUserRepositories', [RepositoryController::class, 'showRepositories'])->name('showUserRepositories');
+
+//Delete one's repository in DB
+Route::delete('/showUserRepositories/{id}',[RepositoryController::class, 'deleteRepository'] )->name('deleteRepository');
 
 //Clone a repository locally
-Route::post('/showUserRepositories/{id}',[GrabberController::class,'cloneRepo'])->name("cloneRepo");
-
-
+Route::post('/scanner/{id}',[GrabberController::class,'cloneRepo'])->name("cloneRepo");
 
 //Scan a repository
-//Route::post('/showUserRepositories/{repositoryName}', [GrabberController::class, 'scanRepo'])->name("scanRepo");
+Route::post('/scanner', [GrabberController::class, 'scanRepo'])->name("scanner");
+
 
 ///*Route::get('login',[Authentification::class,'login'])->name("login");*/
 
@@ -36,9 +41,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 
-//Show one's repositories
-Route::get('/showUserRepositories', [RepositoryController::class, 'showRepositories'])->name('showUserRepositories');
-
-//Delete one's repository in DB
-Route::delete('/showUserRepositories/{id}',[RepositoryController::class, 'deleteRepository'] )->name('deleteRepository');
 
