@@ -28,11 +28,17 @@ class GrabberController extends Controller
         return view("getTheGrabberGit");
     }
 
+// scanRepo() provides an array of all security issues found by ProgPilot
+    public function scanRepo($repositoryName){
+         $path = "allRepo/$repositoryName";
+        exec("./../vendor/bin/progpilot $path", $output);
+        //$this->deleteRepo($path);
+        return view("scanner", ["resultscan"=>$output]);
+    }
 
     public function getDeletter(){
         return view('getDeletter');
     }
-
 
     public function deleteProject(Request $request)
     {
