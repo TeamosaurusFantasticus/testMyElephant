@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Repo;
 use Cz\Git\GitRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Filesystem\Filesystem;
@@ -18,28 +20,40 @@ class GrabberController extends Controller
     }
 
 // cloneRepo() clones a repository in a local directory named by the user then calls scanRepo()
-    public function cloneRepo(Request $request){
-        $path = "allRepo/".$request->repositoryName;
-        GitRepository::cloneRepository($request->repositoryURL, $path);
-        if(!empty(Auth::user()->id)){
-            $newRepositoryController = new RepositoryController;
-            $newRepositoryController->storeRepository($request);
-            $newRepositoryController->showRepositories();
-        }
+    public function cloneRepo($id){
+        //catch an array containing all repositories matching with $id
+        $repositoryToClone = DB::table('repos')->where('id', $id)->get();
+        //only index 0 of $repositoryToClone is of interest as the id is set as unique
+        $repositoryToClone = $repositoryToClone[0];
 
-        $this->scanRepo($path);
+        $url = $repositoryToClone->url;
+        $path = "allRepo/".$repositoryToClone->name;
+
+        //Clone the repository locally using czProject library
+        GitRepository::cloneRepository($url, $path);
+        //$this->scanRepo($path);
         return view("getTheGrabberGit");
     }
 
 // scanRepo() provides an array of all security issues found by ProgPilot
+    public function scanRepo($path){
+        //$path = "allRepo/$repositoryName";
 
-    public function scanRepo($repositoryName){
-         $path = "allRepo/$repositoryName";
         exec("./../vendor/bin/progpilot $path", $output);
         //$this->deleteRepo($path);
         return view("scanner", ["resultscan"=>$output]);
 
     }
+
+
+//Fonction scanRepo pré-refactor
+//    public function scanRepo($repositoryName){
+//         $path = "allRepo/$repositoryName";
+//        exec("./../vendor/bin/progpilot $path", $output);
+//        //$this->deleteRepo($path);
+//        return view("scanner", ["resultscan"=>$output]);
+//
+//    }
 
 // deleteRepo() suppress a local repository after scan
     public function deleteRepo($path){

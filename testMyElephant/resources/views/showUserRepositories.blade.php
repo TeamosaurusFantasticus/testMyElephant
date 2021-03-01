@@ -15,12 +15,14 @@
             <th>{{ $repository->id }}</th>
             <td>{{ $repository->name }}</td>
             <td>{{ $repository->url }}</td>
+
             <td>
-                <form action="{{ route('scanRepo', $repository->name) }}" method="post">
+                <form action="{{ route('cloneRepo',$repository->id) }}" method="post">
                     @csrf
-                    <button type="submit">Scanner</button>
+                    <button type="submit">Cloner et scanner</button>
                 </form>
             </td>
+
             <td>
                 <form action="{{ route('deleteRepository', $repository->id) }}" method="post">
                     @csrf

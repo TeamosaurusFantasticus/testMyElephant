@@ -15,12 +15,19 @@ use App\Http\Controllers\GrabberController;
 */
 
 
+//route to home page
 Route::get('/',[GrabberController::class,'getTheGrabberGit'])->name("getTheGrabberGit");
 
-Route::post('/',[GrabberController::class,'cloneRepo'])->name("cloneRepo");
+//Register a repository in DB
+Route::post('/registerRepo', [RepositoryController::class, 'registerRepositoryInDB'])->name('registerRepositoryInDB');
+
+//Clone a repository locally
+Route::post('/showUserRepositories/{id}',[GrabberController::class,'cloneRepo'])->name("cloneRepo");
+
+
 
 //Scan a repository
-Route::post('/showUserRepositories/{repositoryName}', [GrabberController::class, 'scanRepo'])->name("scanRepo");
+//Route::post('/showUserRepositories/{repositoryName}', [GrabberController::class, 'scanRepo'])->name("scanRepo");
 
 ///*Route::get('login',[Authentification::class,'login'])->name("login");*/
 
