@@ -16,7 +16,13 @@
             <th>{{ $repository->id }}</th>
             <td>{{ $repository->name }}</td>
             <td>{{ $repository->url }}</td>
-            <td>{{ $repository->scanRapport }}</td>
+{{--            <td>{{ $repository->scanRapport }}</td>--}}
+            <td>
+                <form action="{{ route('scanRepo', $repository->name) }}" method="post">
+                    @csrf
+                    <button type="submit">Scanner</button>
+                </form>
+            </td>
             <td>
                 <form action="{{ route('deleteRepository', $repository->id) }}" method="post">
                     @csrf
