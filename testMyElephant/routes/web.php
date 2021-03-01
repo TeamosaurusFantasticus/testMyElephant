@@ -19,6 +19,8 @@ Route::get('/',[GrabberController::class,'getTheGrabberGit'])->name("getTheGrabb
 
 Route::post('/',[GrabberController::class,'cloneRepo'])->name("cloneRepo");
 
+//Scan a repository
+Route::post('/showUserRepositories/{repositoryName}', [GrabberController::class, 'scanRepo'])->name("scanRepo");
 
 ///*Route::get('login',[Authentification::class,'login'])->name("login");*/
 

@@ -55,6 +55,4 @@ class GrabberController extends Controller
 
 //TODO processing ProgPilot report
 //TODO create a class that calls every method needed for our repository scanning process called xxxService
-
-
 }
