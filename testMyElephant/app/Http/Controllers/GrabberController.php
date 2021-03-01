@@ -31,13 +31,11 @@ class GrabberController extends Controller
 
         //Clone the repository locally using czProject library
         GitRepository::cloneRepository($url, $path);
-        //$this->scanRepo($path);
-        return view("getTheGrabberGit");
+        return $this->scanRepo($path);
     }
 
 // scanRepo() provides an array of all security issues found by ProgPilot
     public function scanRepo($path){
-        //$path = "allRepo/$repositoryName";
         exec("./../vendor/bin/progpilot $path", $output);
         $this->deleteRepo($path);
         return view("scanner", ["resultscan"=>$output]);
@@ -48,13 +46,5 @@ class GrabberController extends Controller
         exec("rm -rf $path");
     }
 
-
-    public function deleteProject(Request $request)
-    {
-        $dirname = 'allRepo/' . $request->repoToDelete;
-        exec("rm -rf $dirname");
-    }
-
-//TODO processing ProgPilot report
 //TODO create a class that calls every method needed for our repository scanning process called xxxService
 }
