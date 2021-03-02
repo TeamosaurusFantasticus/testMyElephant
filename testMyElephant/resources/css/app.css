@@ -320,6 +320,26 @@ body input:checked ~ nav > ul > li {
     color: white;
 }
 
+.bgGreen{
+    background: rgb(0,71,9);
+    background: linear-gradient(63deg, rgba(0,71,9,1) 0%, rgba(0,108,105,1) 100%);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.bgShadow{
+    background: rgb(0,71,9);
+    background: linear-gradient(180deg, rgba(0,71,9,1) 0%, rgba(0,73,71,0) 100%);
+   padding: 10px;
+   border-radius: 5px;
+}
+
+.bgWhite{
+    background-color: white;
+    padding: 10px;
+   border-radius: 5px;
+}
+
 .hidden {
     position: absolute;
     left: -10000em;
@@ -327,6 +347,9 @@ body input:checked ~ nav > ul > li {
     width: 1px;
     height: 1px;
     overflow: hidden;
+}
+.marginProfil > * {
+    margin: 10px;
 }
 
 @import 'tailwindcss/base';
