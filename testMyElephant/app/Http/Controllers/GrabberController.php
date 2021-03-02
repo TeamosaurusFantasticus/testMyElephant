@@ -27,7 +27,7 @@ class GrabberController extends Controller
         $repositoryToClone = $repositoryToClone[0];
 
         $url = $repositoryToClone->url;
-        $path = "allRepo/".$repositoryToClone->name;
+        $path = "temporaryRepoStorage/".$repositoryToClone->name;
 
         //Clone the repository locally using czProject library
         GitRepository::cloneRepository($url, $path);
