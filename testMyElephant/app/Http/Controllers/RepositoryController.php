@@ -17,16 +17,16 @@ class RepositoryController extends Controller
         return view('showUserRepositories', ["repositories" => $repositories]);
     }
 
-    //create
-    public function storeRepository(Request $request)
+    //register a Repository in DB
+    public function registerRepositoryInDB(Request $request)
     {
         $newRepo = new Repo();
         $newRepo->name =  $request->repositoryName ;
         $newRepo->url = $request->repositoryURL;
         $newRepo->id_user_repo =  Auth::user()->id;
         $newRepo->save();
+        return $this->showRepositories();
     }
-
 
     //delete
     public function deleteRepository($id){

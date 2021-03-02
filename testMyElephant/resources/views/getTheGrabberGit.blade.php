@@ -15,7 +15,7 @@
             <div class="leftSide">
             <div class="logo_homePage"></div>
             <div class="formSection">
-                <form class="formCloneRepo" method="post" action="{{route('cloneRepo')}}">
+                <form class="formCloneRepo" method="post" action="{{ route('registerRepositoryInDB') }}">
                     @csrf
                     <h3 class="bold largeFont">Veuillez entrer l'url de votre repository Github ainsi qu'un nom à lui donner !</h3>
                     <label class="hidden" for="repositoryURL">Entrer l'URL de votre repository</label>
@@ -26,7 +26,7 @@
                     <input  type="text" name="repositoryName" placeholder="Choisissez un nom">
                     <div class="line"></div>
 
-                    <button class="btn" type="submit">Cloner </button>
+                    <button class="btn" type="submit">Enregistrer</button>
                 </form>
             </div>
             </div>
