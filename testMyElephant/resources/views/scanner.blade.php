@@ -9,19 +9,19 @@
         <link rel="stylesheet" href="../css/app.css">
     </head>
     <body>
-        <x-slot name="header">
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Dashboard') }}
-            </h2>
-        </x-slot>
+    <div class="flex">
+        <a class="logo_scanner" href="{{route('getTheGrabberGit')}}">
+            <div class="logo_white"></div>
+        </a>
+    </div>
         <?php
         //initiate numberOfVuln to display vulnerability number on each vulnerability card title
             $numberOfVuln = 1;
         ?>
         @if (!$finalResult)
-            <div class="containerVuln">
-                <h2>Fécilitation votre repository ne comporte aucune faille de sécurité !</h2>
-                <div class="tenor-gif-embed" data-postid="12374957" data-share-method="host" data-width="100%" data-aspect-ratio="1.8644067796610169"><a href="https://tenor.com/view/elephant-dance-happy-gif-12374957">Elephant Dance GIF</a> from <a href="https://tenor.com/search/elephant-gifs">Elephant GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+            <div class="noVulnMsg">
+                <h2 class="noVulnMsgTitle">Félicitations votre repository ne comporte aucune faille de sécurité PHP !</h2><br>
+                <div class="tenor-gif-embed" data-postid="12374957" data-share-method="host" data-width="30%" data-aspect-ratio="1.8644067796610169"><a href="https://tenor.com/view/elephant-dance-happy-gif-12374957">Elephant Dance GIF</a> from <a href="https://tenor.com/search/elephant-gifs">Elephant GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
             </div>
         @else
             @foreach ($finalResult as $vulnerability)
