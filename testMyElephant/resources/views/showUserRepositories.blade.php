@@ -9,14 +9,13 @@
         </tr>
     </thead>
     <tbody>
-
     @foreach($repositories as $repository)
         <tr>
             <th>{{ $repository->id }}</th>
             <td>{{ $repository->name }}</td>
             <td>{{ $repository->url }}</td>
             <td>
-                <form action="{{ route('scanRepo', $repository->name) }}" method="post">
+                <form action="{{ route('cloneRepo',$repository->id) }}" method="post">
                     @csrf
                     <button type="submit">Scanner</button>
                 </form>
@@ -29,7 +28,6 @@
                 </form>
             </td>
         </tr>
-
     @endforeach
     </tbody>
 </table>

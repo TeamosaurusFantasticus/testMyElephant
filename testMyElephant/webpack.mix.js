@@ -15,8 +15,10 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         require('postcss-import'),
         require('tailwindcss'),
-        require('autoprefixer')
+        require('autoprefixer'),
+
     ])
+    .postCss('resources/css/reportStyle.css', 'public/css')
     .copy("resources/assets", "public/images")
     ;
 
