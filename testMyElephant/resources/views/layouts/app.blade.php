@@ -37,7 +37,8 @@
             @endif --}}
 
             <!-- Page Content -->
-            <main id="allContent">
+            <main id="allContent" class="content_profil">
+
                 {{ $slot }}
             </main>
         </div>

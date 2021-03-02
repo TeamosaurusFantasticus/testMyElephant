@@ -31,9 +31,9 @@ Route::delete('/showUserRepositories/{id}',[RepositoryController::class, 'delete
 Route::post('/scanner/{id}',[GrabberController::class,'cloneRepo'])->name("cloneRepo");
 
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/getTheGrabberGit', function () {
+    return view('/getTheGrabberGit');
+})->name('/dashboard');
 
 
 

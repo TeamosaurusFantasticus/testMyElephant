@@ -1,12 +1,12 @@
-<nav x-data="{ open: false }" class="border-gray-100">
+<nav x-data="{ open: false }" class="nav-bar">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
+                <div class="flex">
                     <a href="{{route('getTheGrabberGit')}}">
-                        <div class="logo_white"></div>
+                        <div class="logo_white logo_dashboard"></div>
                     </a>
                 </div>
 
@@ -138,7 +138,7 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+            <x-jet-responsive-nav-link href="{{ route('showUserRepositories') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-jet-responsive-nav-link>
         </div>
