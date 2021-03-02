@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class RepositoryController extends Controller
 {
-    //show
+    //show repositories owned by a user
     public function showRepositories()
     {
         $target =  Auth::id();
@@ -28,7 +28,7 @@ class RepositoryController extends Controller
         return $this->showRepositories();
     }
 
-    //delete
+    //delete repository line in DB
     public function deleteRepository($id){
          Repo::where('id',$id)->firstorfail()->delete();
          return back();
