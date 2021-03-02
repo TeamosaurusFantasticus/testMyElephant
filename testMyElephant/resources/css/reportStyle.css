@@ -78,3 +78,22 @@ text-align: center;
     max-width: 800px;
     padding: 20px;
 }
+.logo_scanner {
+    margin:  auto;
+}
+.noVulnMsg {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: auto;
+}
+.noVulnMsg > * {
+    margin: auto;
+
+}
+.noVulnMsgTitle {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    margin : 50px auto 50px auto;
+}
