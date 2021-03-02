@@ -1,71 +1,78 @@
-#Teamosaurus Fantasticus :
+# TEST MY ELEPHANT
+
+## Teamosaurus Fantasticus :
+| Alix Boufflers | Claire Magisson-Bonnel | Gaël Bertrand | Thibaut Gerin |
+|:--------------:|:----------------------:|:-------------:|:-------------:|
+|       IMG      |           IMG          |      IMG      |      IMG      |
+
+## Projet :
+
+:fr: Dans le cadre de notre formation DFS au sein de l'It-Akademy, 
+il nous a été demandé de créer une application permettant à un utilisateur 
+de tester son code en PHP à la recherche de failles de sécurité.
+
+---
+
+:gb: During our Development course, we were asked to create an application 
+that allows to test PHP code looking for security vulnerabilities
+<br>
+
+## Genesis :
+
+:fr: Avant de commencer à coder, nous avons établi un **cahier des charges** nous permettant de lister :
+ * Les fonctionnalités nécessaires
+ * Les langages et frameworks que nous souhaitions utiliser
+ * Les conventions que nous souhaitions respecter au sein de l'équipe
+ * Les librairies existantes permettant de faire de l'analyse statique de code PHP
+ * Le niveau de priorité de chaque fonctionnalité
 
 
-Alix Boufflers <br>
-Thibaut Gerin <br>
-Gaël Bertrand <br>
-Claire Magisson-Bonnel <br>
+:fr: Nous avons aussi défini une **organisation** de groupe :
+* Utilisation du Board fourni par GitHub
+* Petites réunions en début, milieu et fin de journée afin de maximiser notre synchronisation
+<br>
+
+---
+
+:gb: Before starting coding, we wrote **specifications** in order to list :
+ * Necessary features
+ * Langages and Frameworks we wanted to use
+ * Conventions we wanted to work with
+ * Existing libraries allowing to make static analysis of PHP code
+ * Priority level of each feature
+<br>
+
+:uk: We also defined a group **organisation** :
+* Using of GitHub board
+* Short meetings on mornings, evening and before lunch to maximise group synchronisation
+<br>
+
+## Development : 
+:fr: 
+* Utilisation de
+    * Framework [LARAVEL](https://laravel.com/) (Taylor Otwell Forever :heart: )
+    * [Gitmojis](https://gitmoji.dev/) pour indiquer le sujet de nos commits
+    * [ProgPilot](https://github.com/designsecurity/progpilot) pour rechercher des failles de sécurités
+     
+
+ * Développement systématiquement en **pair-programming** (ce qui explique que le nombre de push et de Pull-Request ne 
+   soit pas identique pour chaque membre du groupe)
+   
+
+ * La méthode **[Pomodoro](https://fr.wikipedia.org/wiki/Technique_Pomodoro)** 
+   grâce à [Pomofocus](https://pomofocus.io/)
+   
+---
+
+:uk:
+* Use of
+    * Framework [LARAVEL](https://laravel.com/) (Taylor Otwell Forever :heart: )
+    * [Gitmojis](https://gitmoji.dev/) to write our commits' messages
+    * [ProgPilot](https://github.com/designsecurity/progpilot) to scan repositories looking for security vulnerabilities
 
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+* Systematic **pair-programming** development
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+*  **[Pomodoro](https://fr.wikipedia.org/wiki/Technique_Pomodoro) method**
+  thanks to [Pomofocus](https://pomofocus.io/)
