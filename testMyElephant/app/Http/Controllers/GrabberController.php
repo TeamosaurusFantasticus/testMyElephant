@@ -38,7 +38,17 @@ class GrabberController extends Controller
     public function scanRepo($path){
         exec("./../vendor/bin/progpilot $path", $output);
         $this->deleteRepo($path);
-        return view("scanner", ["resultscan"=>$output]);
+        return $this->processProgPilotOutput($output);
+    }
+
+// process ProgPilot's output
+    public function processProgPilotOutput($output){
+        $resultToTurnIntoJSON = '';
+        foreach($output as $value){
+            $resultToTurnIntoJSON .= $value;
+        }
+        $resultInJSON = json_decode($resultToTurnIntoJSON);
+        return view("scanner", ["finalResult"=>$resultInJSON]);
     }
 
 // deleteRepo() suppress a local repository after scan

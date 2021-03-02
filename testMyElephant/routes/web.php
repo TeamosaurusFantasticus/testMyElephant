@@ -31,7 +31,8 @@ Route::delete('/showUserRepositories/{id}',[RepositoryController::class, 'delete
 Route::post('/scanner/{id}',[GrabberController::class,'cloneRepo'])->name("cloneRepo");
 
 //Scan a repository
-Route::post('/scanner', [GrabberController::class, 'scanRepo'])->name("scanner");
+//Route::post('/scanner', [GrabberController::class, 'scanRepo'])->name("scanner");
+Route::post('/scanner', [GrabberController::class, 'processProgPilotOutput'])->name("scanner");
 
 
 ///*Route::get('login',[Authentification::class,'login'])->name("login");*/
