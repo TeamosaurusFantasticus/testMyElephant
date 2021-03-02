@@ -27,15 +27,9 @@ Route::get('/showUserRepositories', [RepositoryController::class, 'showRepositor
 //Delete one's repository in DB
 Route::delete('/showUserRepositories/{id}',[RepositoryController::class, 'deleteRepository'] )->name('deleteRepository');
 
-//Clone a repository locally
+//Clone a repository locally and start the sequence clone, scan and delete local repository
 Route::post('/scanner/{id}',[GrabberController::class,'cloneRepo'])->name("cloneRepo");
 
-//Scan a repository
-//Route::post('/scanner', [GrabberController::class, 'scanRepo'])->name("scanner");
-Route::post('/scanner', [GrabberController::class, 'processProgPilotOutput'])->name("scanner");
-
-
-///*Route::get('login',[Authentification::class,'login'])->name("login");*/
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

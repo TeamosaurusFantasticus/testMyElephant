@@ -43,12 +43,12 @@ class GrabberController extends Controller
 
 // process ProgPilot's output
     public function processProgPilotOutput($output){
-        $resultToTurnIntoJSON = '';
+        $resultInJSON = '';
         foreach($output as $value){
-            $resultToTurnIntoJSON .= $value;
+            $resultInJSON .= $value;
         }
-        $resultInJSON = json_decode($resultToTurnIntoJSON);
-        return view("scanner", ["finalResult"=>$resultInJSON]);
+        $result = json_decode($resultInJSON);
+        return view("scanner", ["finalResult"=>$result]);
     }
 
 // deleteRepo() suppress a local repository after scan
