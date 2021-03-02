@@ -14,6 +14,24 @@
         <div class="sections">
             <div class="leftSide">
             <div class="logo_homePage"></div>
+
+            @if (Illuminate\Support\Facades\Auth::check() == false)
+            <div class="formSection">
+                <div class="formSection_authFalse--txt bold">
+                    Trouver les failles de sécurité de vos repositories Github en vous connectant !
+                </div>
+
+                <div class="formSection_authFalse--btn">
+                    <a class="btn--homeAuthFalse" href="{{route("login")}}">S'identifier</a>
+                    <a class="btn--homeAuthFalse" href="{{route("register")}}">S'enregistrer</a>
+
+                </div>
+
+
+            </div>
+            @endif
+
+            @if (Illuminate\Support\Facades\Auth::check())
             <div class="formSection">
                 <form class="formCloneRepo" method="post" action="{{ route('registerRepositoryInDB') }}">
                     @csrf
@@ -29,6 +47,8 @@
                     <button class="btn" type="submit">Enregistrer</button>
                 </form>
             </div>
+            @endif
+
             </div>
             <div class="rapportSection">
             </div>

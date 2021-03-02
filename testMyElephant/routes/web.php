@@ -36,9 +36,9 @@ Route::post('/scanner', [GrabberController::class, 'scanRepo'])->name("scanner")
 
 ///*Route::get('login',[Authentification::class,'login'])->name("login");*/
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/getTheGrabberGit', function () {
+    return view('/getTheGrabberGit');
+})->name('/dashboard');
 
 
 

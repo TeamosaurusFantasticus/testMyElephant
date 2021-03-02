@@ -12,6 +12,7 @@ body{
     /*height: 100vh;*/
 }
 
+
 .containerVuln {
 display: flex;
 flex-direction: column;
@@ -60,11 +61,20 @@ display: flex;
 flex-direction: row;
 }
 
-sinkDetails > h3 {
+.sinkDetails > h3 {
 text-align: center;
 
 }
 
 .sink_file, .sink_name, .sink_line, .vuln_cwe {
     margin-left: 25px;
+}
+
+
+.showUserRepositories{
+    background-color: white;
+    border-radius: 10px;
+    margin: 180px auto auto auto;
+    max-width: 800px;
+    padding: 20px;
 }
