@@ -17,7 +17,7 @@
             <td>
                 <form action="{{ route('cloneRepo',$repository->id) }}" method="post">
                     @csrf
-                    <button type="submit">Cloner et scanner</button>
+                    <button type="submit">Scanner</button>
                 </form>
             </td>
             <td>
