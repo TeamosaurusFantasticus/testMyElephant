@@ -31,13 +31,37 @@
                         <div class="formSection">
                             <form class="formCloneRepo" method="post" action="{{ route('registerRepositoryInDB') }}">
                                 @csrf
+
+{{--                                @error('repositoryURL')--}}
+{{--                                <div  class="col-md-12 alert alert-danger form-control alert-dismissible fade show" role="alert">--}}
+{{--                                    <i class="fas fa-exclamation-circle" style="color: red;"></i>--}}
+{{--                                    {{ $message }}--}}
+{{--                                    <i class="fas fa-exclamation-circle" style="color: red;"></i>--}}
+{{--                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">--}}
+{{--                                        <i class="fas fa-window-close"></i>--}}
+{{--                                    </button>--}}
+{{--                                </div>--}}
+{{--                                @enderror--}}
+
                                 <h3 class="bold largeFont">Veuillez entrer l'url de votre repository Github ainsi qu'un nom à lui donner !</h3>
                                 <label class="hidden" for="repositoryURL">Entrer l'URL de votre repository</label>
                                 <input type="text" name="repositoryURL" placeholder="URL du repository" required>
 
+{{--                                @error('repositoryName')--}}
+{{--                                <div  class="col-md-12 alert alert-danger form-control alert-dismissible fade show" role="alert">--}}
+{{--                                    <i class="fas fa-exclamation-circle" style="color: red;"></i>--}}
+{{--                                    {{ $message }}--}}
+{{--                                    <i class="fas fa-exclamation-circle" style="color: red;"></i>--}}
+{{--                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">--}}
+{{--                                        <i class="fas fa-window-close"></i>--}}
+{{--                                    </button>--}}
+{{--                                </div>--}}
+{{--                                @enderror--}}
+
+
                                 <div class="line"></div>
                                 <label class="hidden" for="repositoryName">Choisissez un nom pour votre repository</label>
-                                <input  type="text" name="repositoryName" placeholder="Choisissez un nom" required>
+                                <input value="{{old('repositoryName')}}" class="@error('repositoryName') is-invalid @enderror"  type="text" name="repositoryName" placeholder="Choisissez un nom" required>
                                 <div class="line"></div>
 
                                 <button class="btn" type="submit">Enregistrer</button>
