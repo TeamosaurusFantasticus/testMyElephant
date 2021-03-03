@@ -18,7 +18,7 @@
                     @if (Illuminate\Support\Facades\Auth::check() == false)
                         <div class="formSection">
                             <div class="formSection_authFalse--txt bold">
-                                Trouver les failles de sécurité de vos repositories Github en vous connectant !
+                                Trouvez les failles de sécurité PHP de vos repositories Github en vous connectant !
                             </div>
 
                             <div class="formSection_authFalse--btn">
