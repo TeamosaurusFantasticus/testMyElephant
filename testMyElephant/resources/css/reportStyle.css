@@ -74,7 +74,7 @@ text-align: center;
 .showUserRepositories{
     background-color: white;
     border-radius: 10px;
-    margin: 180px auto auto auto;
+    margin: 0px auto auto auto;
     max-width: 800px;
     padding: 20px;
 }
