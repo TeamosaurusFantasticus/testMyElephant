@@ -27,14 +27,14 @@
             @foreach ($finalResult as $vulnerability)
                 <div class="containerVuln">
                     <div class="report">
-                        <h2 class="vulnTitle">Vulnerability n°{{$numberOfVuln}}</h2>
+                        <h2 class="vulnTitle">Vulnerabilité n°{{$numberOfVuln}}</h2>
                         <div class="vulnDetails">
                             <div class="vul_Type--container">
                                 <h2>Type</h2>
                                 <h3 class="vuln_type">{{ $vulnerability->vuln_type }}</h3>
                             </div>
                             <div class="vul_Name--container">
-                                <h2>Name</h2>
+                                <h2>Nom</h2>
                                 <h3 class="vuln_name">{{ $vulnerability->vuln_name }}</h3>
                             </div>
                         </div>
@@ -42,12 +42,12 @@
                         <div class="sourceAndSinkDetails">
                             <div class="sinkDetails">
                                 <br>
-                                <h3>Sink details</h3>
-                                <div class="sink_name"> <strong>Name :</strong> {{ $vulnerability->sink_name }}</div><br>
-                                <div class="sink_line"><strong>Line :</strong> {{ $vulnerability->sink_line }}</div><br>
-                                <div class="sink_file"><strong>File :</strong> {{ $vulnerability->sink_file }}</div><br>
+                                <h3>Détails</h3>
+                                <div class="sink_name"> <strong>Nom :</strong> {{ $vulnerability->sink_name }}</div><br>
+                                <div class="sink_line"><strong>Ligne :</strong> {{ $vulnerability->sink_line }}</div><br>
+                                <div class="sink_file"><strong>Fichier :</strong> {{ $vulnerability->sink_file }}</div><br>
                                 <div class="vuln_cwe"><strong>Code CWE :</strong> {{ $vulnerability->vuln_cwe }}</div><br>
-                                <p>Find some details about your vulnerability on : <a href="https://cwe.mitre.org/">cwe.mitre.org</a></p>
+                                <p>Vous trouverez plus d'informations sur cette faille grâce à son code CWE ici : <a href="https://cwe.mitre.org/">cwe.mitre.org</a></p>
                             </div>
                         </div>
                     </div>
