@@ -21,7 +21,7 @@
           @if (Illuminate\Support\Facades\Auth::check())
               <li><a class="bold" href="{{route("profile.show")}}">PROFIL</a></li>
               <li><a class="bold" href="{{route("showUserRepositories")}}">REPOSITORIES</a></li>
-              <li><a class="bold" href="{{route("login")}}">A PROPOS</a></li>
+              <li><a class="bold" href="{{route("about")}}">A PROPOS</a></li>
               <li>
                   <form method="POST" action="{{ route('logout') }}">
                       @csrf

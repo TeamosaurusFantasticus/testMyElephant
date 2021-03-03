@@ -18,6 +18,9 @@ use App\Http\Controllers\GrabberController;
 //route to home page
 Route::get('/',[GrabberController::class,'getTheGrabberGit'])->name("getTheGrabberGit");
 
+//route to about page
+Route::get('/about',[GrabberController::class,'about'])->name("about");
+
 //Register a repository in DB
 Route::post('/showUserRepositories', [RepositoryController::class, 'registerRepositoryInDB'])->name('registerRepositoryInDB');
 
