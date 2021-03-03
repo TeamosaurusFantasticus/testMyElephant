@@ -6,6 +6,7 @@ use App\Models\Repo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\formRepo;
 
 class RepositoryController extends Controller
 {
@@ -18,10 +19,10 @@ class RepositoryController extends Controller
     }
 
     //register a Repository in DB
-    public function registerRepositoryInDB(Request $request)
+    public function registerRepositoryInDB(FormRepo $request )
     {
         $newRepo = new Repo();
-        $newRepo->name =  $request->repositoryName ;
+        $newRepo->name =  $request->repositoryName;
         $newRepo->url = $request->repositoryURL;
         $newRepo->id_user_repo =  Auth::user()->id;
         $newRepo->save();

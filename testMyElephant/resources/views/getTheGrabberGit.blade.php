@@ -33,11 +33,11 @@
                                 @csrf
                                 <h3 class="bold largeFont">Veuillez entrer l'url de votre repository Github ainsi qu'un nom à lui donner !</h3>
                                 <label class="hidden" for="repositoryURL">Entrer l'URL de votre repository</label>
-                                <input type="text" name="repositoryURL" placeholder="URL du repository">
+                                <input type="text" name="repositoryURL" placeholder="URL du repository" required>
 
                                 <div class="line"></div>
                                 <label class="hidden" for="repositoryName">Choisissez un nom pour votre repository</label>
-                                <input  type="text" name="repositoryName" placeholder="Choisissez un nom">
+                                <input  type="text" name="repositoryName" placeholder="Choisissez un nom" required>
                                 <div class="line"></div>
 
                                 <button class="btn" type="submit">Enregistrer</button>
