@@ -1,4 +1,8 @@
-# HOW TO CONTRIBUTE TO TEST MY ELEPHANT
+# Contribute to test my elephant
+
+:gb: English version below 
+
+## COMMENT CONTRIBUER
 
 :fr:
 
@@ -7,7 +11,7 @@
 * Installer le projet en local : [install guide](INSTALL.md)
 -------------------------------------------------------
 
-* Le propositions de modification se font par des PR
+* Les propositions de modification se font par des PR
 
 * Les messages de commit doivent respecter la convention [gitmoji](https://gitmoji.dev/)
 
@@ -34,7 +38,8 @@
 
 * Permettre à un utilisateur de scanner un projet qui se trouve au sein d'un autre projet.
 
-
+---------------------
+______________
 <br>
 
 :gb:
