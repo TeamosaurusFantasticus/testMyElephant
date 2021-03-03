@@ -1,9 +1,12 @@
 # TEST MY ELEPHANT
 
+
 ## Teamosaurus Fantasticus :
+
 | Alix Boufflers | Claire Magisson-Bonnel | Gaël Bertrand | Thibaut Gerin |
 |:--------------:|:----------------------:|:-------------:|:-------------:|
 |       IMG      |           IMG          |      IMG      |      IMG      |
+
 
 ## Projet :
 
@@ -76,3 +79,4 @@ that allows to test PHP code looking for security vulnerabilities
 
 *  **[Pomodoro](https://fr.wikipedia.org/wiki/Technique_Pomodoro) method**
   thanks to [Pomofocus](https://pomofocus.io/)
+
