@@ -24,7 +24,7 @@
                             <th></th>
                             <th scope="col">URL</th>
                             <th></th>
-                            <th scope="col">Rajouté le</th>
+                            <th scope="col">Ajouté le</th>
                             <th scope="col"></th>
                             <th scope="col"></th>
                             <th scope="col"></th>

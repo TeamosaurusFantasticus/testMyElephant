@@ -16,27 +16,27 @@ use App\Http\Controllers\GrabberController;
 
 
 //route to home page
-Route::get('/',[GrabberController::class,'getTheGrabberGit'])->name("getTheGrabberGit");
+Route::get("/",[GrabberController::class,"getTheGrabberGit"])->name("getTheGrabberGit");
 
 //route to about page
-Route::get('/about',[GrabberController::class,'about'])->name("about");
+Route::get("/about",[GrabberController::class,"about"])->name("about");
 
 //Register a repository in DB
-Route::post('/showUserRepositories', [RepositoryController::class, 'registerRepositoryInDB'])->name('registerRepositoryInDB');
+Route::post("/showUserRepositories", [RepositoryController::class, "registerRepositoryInDB"])->name("registerRepositoryInDB");
 
 //Show one's repositories
-Route::get('/showUserRepositories', [RepositoryController::class, 'showRepositories'])->name('showUserRepositories');
+Route::get("/showUserRepositories", [RepositoryController::class, "showRepositories"])->name("showUserRepositories");
 
 //Delete one's repository in DB
-Route::delete('/showUserRepositories/{id}',[RepositoryController::class, 'deleteRepository'] )->name('deleteRepository');
+Route::delete("/showUserRepositories/{id}",[RepositoryController::class, "deleteRepository"] )->name("deleteRepository");
 
 //Clone a repository locally and start the sequence clone, scan and delete local repository
-Route::post('/scanner/{id}',[GrabberController::class,'cloneRepo'])->name("cloneRepo");
+Route::post("/scanner/{id}",[GrabberController::class,"cloneRepo"])->name("cloneRepo");
 
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/getTheGrabberGit', function () {
-    return view('/getTheGrabberGit');
-})->name('/dashboard');
+Route::middleware(["auth:sanctum", "verified"])->get("/getTheGrabberGit", function () {
+    return view("/getTheGrabberGit");
+})->name("/dashboard");
 
 
 
