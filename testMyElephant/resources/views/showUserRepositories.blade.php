@@ -21,16 +21,24 @@
                     <thead>
                         <tr>
                             <th scope="col">Nom</th>
+                            <th></th>
                             <th scope="col">URL</th>
+                            <th></th>
+                            <th scope="col">Rajouté le</th>
+                            <th scope="col"></th>
                             <th scope="col"></th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
                     @foreach($repositories as $repository)
-                        <tr>
+                        <tr class="arrayRepos">
                             <td>{{ $repository->name }}</td>
+                            <td><div class="verticalLine"></div></td>
                             <td>{{ $repository->url }}</td>
+                            <td><div class="verticalLine"></div></td>
+                            <td>{{ $repository->created_at }}</td>
+                            <td><div class="verticalLine"></div></td>
                             <td>
                                 <form action="{{ route('cloneRepo',$repository->id) }}" method="post">
                                     @csrf
