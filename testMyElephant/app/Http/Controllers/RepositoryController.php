@@ -22,17 +22,25 @@ class RepositoryController extends Controller
     public function registerRepositoryInDB(Request $request )
     {
 
+        $rules = [
+            "repositoryName" => "required|min:4|max:30|alpha_dash",
+            "repositoryURL" => "required|url"
+        ];
+
+        $request->validate($rules);
+
             $newRepo = new Repo();
             $newRepo->name =  $request->repositoryName;
             $newRepo->url = $request->repositoryURL;
             $newRepo->id_user_repo =  Auth::user()->id;
             $newRepo->save();
+
             return $this->showRepositories();
     }
 
     //delete repository line in DB
     public function deleteRepository($id){
-         Repo::where('id',$id)->firstorfail()->delete();
+         Repo::where("id",$id)->firstorfail()->delete();
          return back();
     }
 }
