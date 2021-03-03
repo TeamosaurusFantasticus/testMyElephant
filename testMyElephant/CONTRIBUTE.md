@@ -1,34 +1,36 @@
 ------------------------------------------------------------------------------
 # HOW TO CONTRIBUTE TO THE PROJECT : TEST MY ELEPHANT
-* fork the project : https://github.com/it-akademy-students/hackathon-developpement-securite-teamosaurus-fantasticus.git
+* Fork the project : https://github.com/it-akademy-students/hackathon-developpement-securite-teamosaurus-fantasticus.git
 
-* Read the [install guide](INSTALL.md) to complete your setup of TEST MY ELEPHANT
+* Read the [install guide](INSTALL.md) to complete your setup of **TEST MY ELEPHANT**
 -------------------------------------------------------
-* sand us a mail, we love pair programming ! 
 
-* so, you can propose your solution with a pull request
+* You can suggest your solution with a pull request
 
-* we use gitmoji for the pull request
+* We use gitmoji for the pull request
 
-*  this work only on a linux (we use line of command, used by linux)
+* It works only on a Linux OS (we use line of command, used by linux)
+
+* Send us a mail, we love pair programming ! 
 -------------------------------------------------------------------------
-## The V.2.0.0 in comming need you !
+## The V.2.0.0 in comming needs you !
+### What's the plan?
 
-* make it works under windows ?
+* Make it works on Windows ?
 
-* make it, the user are not foreced to create an acount to scan him repo. 
+* Offer the possibility to scan a repo whitout any registration.
 
-* make the treatment of the repo can be register in us data base if the user is log. 
+* Record the reports in our database if the user is logged.
 
-* generate PDF of other type of files 
+* Generate PDF of other type of files 
 
-*  possibility to chose beetween english and french or other langage.
+* Possibility to choose between english and french or other languages.
 
-* the back office
+* Building a back office, in order to give statistics and the possibility to delete user accounts.
 
-* limit the height and the time of a repo (dangereux de dire ça ici)
+* Delete automatically a repo in the database after a few months.
 
-* dont be blocked by the implied files.
+* Allow the possibility to scan a project already in a project.
 
 
 
