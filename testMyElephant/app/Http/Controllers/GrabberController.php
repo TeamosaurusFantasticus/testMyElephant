@@ -22,7 +22,7 @@ class GrabberController extends Controller
 // cloneRepo() clones a repository in a local directory named by the user then calls scanRepo()
     public function cloneRepo($id){
         //catch an array containing all repositories matching with $id
-        $repositoryToClone = DB::table('repos')->where('id', $id)->get();
+        $repositoryToClone = DB::table("repos")->where("id", $id)->get();
         //only index 0 of $repositoryToClone is of interest as the id is set as unique
         $repositoryToClone = $repositoryToClone[0];
 
@@ -43,7 +43,7 @@ class GrabberController extends Controller
 
 // process ProgPilot's output
     public function processProgPilotOutput($output){
-        $resultInJSON = '';
+        $resultInJSON = "";
         foreach($output as $value){
             $resultInJSON .= $value;
         }
@@ -61,6 +61,4 @@ class GrabberController extends Controller
 
         return view("about");
     }
-
-//TODO create a class that calls every method needed for our repository scanning process called xxxService
 }
