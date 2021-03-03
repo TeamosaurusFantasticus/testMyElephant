@@ -15,7 +15,7 @@
                     <div class="logo_white"></div>
                 </a>
             </div>
-            <h2 class="aboutTitle bold">A propos</h2><br>
+            <h2 class="pageTitle bold">A propos</h2><br>
             <div class="aboutContent bgWhite">
                 <h3><strong>Qui sommes-nous ?</strong> </h3><br>
                 <p>

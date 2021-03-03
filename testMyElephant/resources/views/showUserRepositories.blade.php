@@ -15,7 +15,7 @@
                     {{ __('Dashboard') }}
                 </h2>
             </x-slot>
-
+            <h2 class="pageTitle bold">Vos repositories</h2><br>
             <div class="showUserRepositories">
                 <table class="table">
                     <thead>
