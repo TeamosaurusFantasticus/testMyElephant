@@ -23,7 +23,7 @@ class RepositoryController extends Controller
     {
 
         $rules = [
-            "repositoryName" => 'required|min:2|max:50|alpha_dash',
+            "repositoryName" => "required|min:4|max:30|alpha_dash",
             "repositoryURL" => "required|url"
         ];
 
@@ -40,7 +40,7 @@ class RepositoryController extends Controller
 
     //delete repository line in DB
     public function deleteRepository($id){
-         Repo::where('id',$id)->firstorfail()->delete();
+         Repo::where("id",$id)->firstorfail()->delete();
          return back();
     }
 }

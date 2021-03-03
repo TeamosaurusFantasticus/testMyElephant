@@ -34,7 +34,7 @@
                                 @csrf
 
                                 @error('repositoryURL')
-                                    <div  class="col-md-12 alert alert- form-control alert-dismissible fade show" role="alert">
+                                    <div  class="col-md-12 alert alert-danger form-control alert-dismissible fade show" role="alert">
                                         <i class="fas fa-exclamation-circle" style="color: red;"></i>
                                         {{ $message }}
                                         <i class="fas fa-exclamation-circle" style="color: red;"></i>
