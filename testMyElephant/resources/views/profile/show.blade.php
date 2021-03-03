@@ -9,6 +9,7 @@
 </head>
 <body>
 
+<div class="showVulnPage">
 
 <x-app-layout>
     <x-slot name="header">
@@ -48,6 +49,7 @@
         </div>
     </div>
 </x-app-layout>
+</div>
 
 </body>
 </html>

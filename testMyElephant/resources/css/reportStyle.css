@@ -1,15 +1,19 @@
 
-body{
-    /*position: absolute;*/
-    font-family: 'Nunito', sans-serif;
-    background-image: url("../assets/BG3tme.jpg");
+.scannerPage{
+    position: absolute;
+    margin: auto auto auto auto;
+    background-image: url("../assets/BG3tme-min.jpg");
     background-repeat: no-repeat;
     background-attachment:fixed;
     background-position-x: center;
-    background-position-y: center;
-    background-size: 100%;
-    /*width: 100%;*/
-    /*height: 100vh;*/
+    background-position-y: 80%;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 
@@ -85,7 +89,7 @@ text-align: center;
     display: flex;
     flex-direction: column;
     max-width: 1000px;
-    margin: auto;
+    margin: 100px auto auto auto;
 }
 .noVulnMsg > * {
     margin: auto;
@@ -97,3 +101,23 @@ text-align: center;
     color: white;
     margin : 50px auto 50px auto;
 }
+
+@media screen and (max-width: 500px) {
+
+    .noVulnMsg{
+
+    margin-top: 25px;
+    }
+
+    body{
+        overflow: hidden;
+    }
+    .showUserRepositories{
+        position: relative;
+    }
+
+    .tenor-gif-embed{
+        width: 50vw;
+    }
+
+  }
