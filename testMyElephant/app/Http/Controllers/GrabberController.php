@@ -56,5 +56,11 @@ class GrabberController extends Controller
         exec("rm -rf $path");
     }
 
+
+    public function about(){
+
+        return view("about");
+    }
+
 //TODO create a class that calls every method needed for our repository scanning process called xxxService
 }
