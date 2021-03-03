@@ -1,15 +1,15 @@
-# Contribute to test my elephant
+# TEST MY ELEPHANT
 
 :gb: English version below 
 
-## COMMENT CONTRIBUER
+## Comment contribuer ?
 
 :fr:
 
 * Fork le [projet](https://github.com/it-akademy-students/hackathon-developpement-securite-teamosaurus-fantasticus.git)
 
 * Installer le projet en local : [install guide](INSTALL.md)
--------------------------------------------------------
+---
 
 * Les propositions de modification se font par des PR
 
@@ -18,7 +18,7 @@
 * TestMyElephant ne fonctionne que sur des systèmes Linux
 
 * Envoyez nous un mail : testmyelephant@gmail.com , on adore (et on préfère) faire du pair :wink:
--------------------------------------------------------------------------
+---
 ## La V2.0.0 a besoin de vous !!
 ### C'est quoi le plan ?
 
@@ -38,16 +38,15 @@
 
 * Permettre à un utilisateur de scanner un projet qui se trouve au sein d'un autre projet.
 
----------------------
-______________
-<br>
-
+---
+___
 :gb:
+## How to contribute ?
 
 * Fork the [project](https://github.com/it-akademy-students/hackathon-developpement-securite-teamosaurus-fantasticus.git)
 
 * Read the [install guide](INSTALL.md) to complete your setup of **TEST MY ELEPHANT**
--------------------------------------------------------
+----
 
 * You can suggest your solution with a pull request
 
@@ -56,7 +55,7 @@ ______________
 * TestMyElephant works only on Linux systems
 
 * Send us an email : testmyelephant@gmail.com , we'd love to do some pair programming with you ! 
--------------------------------------------------------------------------
+---
 ## The V.2.0.0 needs you !
 ### What's the plan?
 
