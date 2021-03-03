@@ -22,11 +22,19 @@ class RepositoryController extends Controller
     public function registerRepositoryInDB(Request $request )
     {
 
+        $rules = [
+            "repositoryName" => 'required|min:2|max:50|alpha_dash',
+            "repositoryURL" => "required|url"
+        ];
+
+        $request->validate($rules);
+
             $newRepo = new Repo();
             $newRepo->name =  $request->repositoryName;
             $newRepo->url = $request->repositoryURL;
             $newRepo->id_user_repo =  Auth::user()->id;
             $newRepo->save();
+
             return $this->showRepositories();
     }
 
