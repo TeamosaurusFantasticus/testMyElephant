@@ -5,7 +5,7 @@
 
 | Alix Boufflers | Claire Magisson-Bonnel | Gaël Bertrand | Thibaut Gerin |
 |:--------------:|:----------------------:|:-------------:|:-------------:|
-|       IMG      |           IMG          |      IMG      |      IMG      |
+|![Alix](resources/assets/protocatDino_origin_Alix.png)| ![Claire](resources/assets/protocatDino_origin_gaston.png) | ![Gael](resources/assets/protocatDino_origin_Gael.png) | ![Thibaut](resources/assets/protocatDino_origin_thibaut.png) |
 
 
 ## Projet :
