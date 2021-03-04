@@ -6,6 +6,8 @@ use App\Models\Repo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Rules\isGit;
+
 
 class RepositoryController extends Controller
 {
@@ -22,11 +24,10 @@ class RepositoryController extends Controller
     //register a Repository in DB
     public function registerRepositoryInDB(Request $request )
     {
-
-        $rules = [
-            "repositoryName" => "required|min:4|max:30|alpha_dash",
-            "repositoryURL" => "required|url"
-        ];
+            $rules = [
+                "repositoryName" => "required|min:4|max:30|alpha_dash",
+                "repositoryURL" => ["required", "url", new isGit]
+            ];
 
         $request->validate($rules);
 
