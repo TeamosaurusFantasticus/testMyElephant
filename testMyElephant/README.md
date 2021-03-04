@@ -6,6 +6,8 @@
 | [Alix Boufflers](https://github.com/Onitetsu21) | [Claire Magisson-Bonnel](https://github.com/Le-TRex) | [Gaël Bertrand](https://github.com/g43l) | [Thibaut Gerin](https://github.com/ThibautGr) |
 |:--------------:|:----------------------:|:-------------:|:-------------:|
 |![Alix](resources/assets/protocatDino_origin_Alix.png)| ![Claire](resources/assets/protocatDino_origin_gaston.png) | ![Gael](resources/assets/protocatDino_origin_Gael.png) | ![Thibaut](resources/assets/protocatDino_origin_thibaut.png) |
+
+
 *All four dinoCat images are courtesy of Thibaut Gérin and are not to be used without his permission*
 
 ## Projet :
