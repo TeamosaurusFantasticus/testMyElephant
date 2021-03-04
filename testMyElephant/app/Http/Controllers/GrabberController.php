@@ -24,18 +24,27 @@ class GrabberController extends Controller
         $repoRef = DB::Table("repos")->where("id",$id)->get();
         $userRef = DB::Table("users")->where("id",Auth::id())->get();
 
-        if($repoRef->id_user_repo == $userRef->id) {
-            //catch an array containing all repositories matching with $id
-            $repositoryToClone = DB::table("repos")->where("id", $id)->get();
-            //only index 0 of $repositoryToClone is of interest as the id is set as unique
-            $repositoryToClone = $repositoryToClone[0];
+        if (!empty($repoRef[0]->id_user_repo)){
 
-            $url = $repositoryToClone->url;
-            $path = "temporaryRepoStorage/" . $repositoryToClone->name;
+            $repoid = $repoRef[0]->id_user_repo;
+            $userid = $userRef[0]->id;
+            if($repoid == $userid ) {
+                //catch an array containing all repositories matching with $id
+                $repositoryToClone = DB::table("repos")->where("id", $id)->get();
+                //only index 0 of $repositoryToClone is of interest as the id is set as unique
+                $repositoryToClone = $repositoryToClone[0];
 
-            //Clone the repository locally using czProject library
-            GitRepository::cloneRepository($url, $path);
-            return $this->scanRepo($path);
+                $url = $repositoryToClone->url;
+                $path = "temporaryRepoStorage/" . $repositoryToClone->name;
+
+                //Clone the repository locally using czProject library
+                GitRepository::cloneRepository($url, $path);
+                return $this->scanRepo($path);
+            }
+            else{
+                return redirect()->back();
+            }
+
         }
         else{
             return redirect()->back();
