@@ -42,7 +42,24 @@ class RepositoryController extends Controller
 
     //delete repository line in DB
     public function deleteRepository($id){
-         Repo::where("id",$id)->firstorfail()->delete();
-         return back();
+
+
+            $repoRef = DB::Table("repos")->where("id",$id)->get();
+            $userRef = DB::Table("users")->where("id",Auth::id())->get();
+            if (!empty($repoRef[0]->id_user_repo)){
+
+                $repoid = $repoRef[0]->id_user_repo;
+                $userid = $userRef[0]->id;
+                if($repoid == $userid ) {
+
+                    Repo::where("id", $id)->firstorfail()->delete();
+                    return back();
+
+                }
+            }
+            else{
+                return redirect()->back();
+            }
+
     }
 }
