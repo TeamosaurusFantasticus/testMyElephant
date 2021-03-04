@@ -35,6 +35,6 @@ class isGit implements Rule
      */
     public function message()
     {
-        return "Veuillez rentrer une URL GitHub";
+        return "Veuillez rentrer l'URL d'un repo GitHub ou GitLab";
     }
 }
