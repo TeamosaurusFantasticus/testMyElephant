@@ -78,9 +78,15 @@ text-align: center;
     max-width: 800px;
     padding: 20px;
 }
+
+.showUserRepositories > *:hover{
+    color: rgba(0,71,9,1);
+}
+
 .logo_scanner {
     margin:  auto;
 }
+
 .noVulnMsg {
     display: flex;
     flex-direction: column;

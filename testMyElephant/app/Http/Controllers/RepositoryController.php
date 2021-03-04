@@ -14,7 +14,7 @@ class RepositoryController extends Controller
     {
         $target =  Auth::id();
         $repositories =  DB::table("repos")->where('id_user_repo',$target)->get();
-        return view('showUserRepositories', ["repositories" => $repositories]);
+        return view('showUserRepositories',compact('repositories'));
     }
 
 
