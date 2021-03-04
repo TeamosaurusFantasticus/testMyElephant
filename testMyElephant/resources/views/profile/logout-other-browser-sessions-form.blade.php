@@ -7,7 +7,7 @@
 
     <x-slot name="description">
         <div class="bgWhite">
-            {{ __("Choisissez et déconnectez vous de vos sessions actives sur d'autres navigateurs et appareils") }}
+            {{ __("Choisissez et déconnectez-vous de vos sessions actives sur d'autres navigateurs et appareils") }}
         </div>
     </x-slot>
 
