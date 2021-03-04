@@ -5,7 +5,7 @@
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">
-            {{ __('Vous avez oublié votre mot de passe? Aucun problème! <br>Saisissez votre email et on vous envoie un lien de réinitilisation tout de suite! 😉') }}
+            {{ __('Vous avez oublié votre mot de passe? Aucun problème! Saisissez votre email et on vous envoie un lien de réinitilisation tout de suite! 😉') }}
         </div>
 
         @if (session('status'))
