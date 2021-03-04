@@ -33,31 +33,13 @@
                             <form class="formCloneRepo" method="post" action="{{ route("registerRepositoryInDB") }}">
                                 @csrf
 
-                                @error("repositoryURL")
-                                    <div  class="col-md-12 alert alert-danger form-control alert-dismissible fade show" role="alert">
-                                        <i class="fas fa-exclamation-circle" style="color: red;"></i>
-                                        {{ $message }}
-                                        <i class="fas fa-exclamation-circle" style="color: red;"></i>
-                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                            <i class="fas fa-window-close"></i>
-                                        </button>
-                                    </div>
-                                @enderror
 
-                                <h3 class="bold largeFont">Veuillez entrer l'url de votre repository Github ainsi qu'un nom à lui donner !</h3>
+
+                                <h3 class="bold largeFont">Veuillez entrer l'URL de votre repository Github ainsi qu'un nom à lui donner !</h3>
                                 <label class="hidden" for="repositoryURL">Entrer l'URL de votre repository</label>
                                 <input id="repositoryURL" type="text" value="{{old("repositoryURL")}}" name="repositoryURL"  class="@error("repositoryURL") is-invalid @enderror" placeholder="URL du repository" >
 
-                                @error("repositoryName")
-                                    <div  class="col-md-12 alert alert-danger form-control alert-dismissible fade show" role="alert">
-                                        <i class="fas fa-exclamation-circle" style="color: red;"></i>
-                                        {{ $message }}
-                                        <i class="fas fa-exclamation-circle" style="color: red;"></i>
-                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                            <i class="fas fa-window-close"></i>
-                                        </button>
-                                    </div>
-                                @enderror
+
 
                                 <div class="line"></div>
                                 <label class="hidden" for="repositoryName">Choisissez un nom pour votre repository</label>
@@ -68,8 +50,25 @@
                             </form>
                         </div>
                     @endif
+
+            </div>
+            <div class="alertBootstrap">
+                @error("repositoryURL")
+                <div class="alert alert-danger alert-dismissible fade show alertBootstrap" role="alert">
+                    {{$message}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @enderror
+
+                @error("repositoryName")
+                <div class="alert alert-danger alert-dismissible fade show alertBootstrap" role="alert">
+                    {{$message}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @enderror
             </div>
         </div>
+
         @include("Components.Navbar")
     </div>
 

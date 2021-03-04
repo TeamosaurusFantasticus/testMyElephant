@@ -13,7 +13,7 @@
 
     <x-slot name="content">
         <div class="max-w-xl text-sm text-gray-600">
-            {{ __('Toutes les ressources et les informations du compte vont être supprimer. Avant de supprimer le compte, assurez vous de télécharger les données que vous désirez garder.') }}
+            {{ __('Toutes les ressources et les informations du compte vont être supprimées. Avant de supprimer le compte, assurez vous de télécharger les données que vous désirez garder.') }}
         </div>
 
         <div class="mt-5">
@@ -29,7 +29,7 @@
             </x-slot>
 
             <x-slot name="content">
-                {{ __('Etes-vous sûr de vouloir supprimer votre compte?') }}
+                {{ __('Êtes-vous sûr de vouloir supprimer votre compte?') }}
 
                 <div class="mt-4" x-data="{}" x-on:confirming-delete-user.window="setTimeout(() => $refs.password.focus(), 250)">
                     <x-jet-input type="password" class="mt-1 block w-3/4"
