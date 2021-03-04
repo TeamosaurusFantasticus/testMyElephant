@@ -35,7 +35,7 @@
 
 
 
-                                <h3 class="bold largeFont">Veuillez entrer l'url de votre repository Github ainsi qu'un nom à lui donner !</h3>
+                                <h3 class="bold largeFont">Veuillez entrer l'URL de votre repository Github ainsi qu'un nom à lui donner !</h3>
                                 <label class="hidden" for="repositoryURL">Entrer l'URL de votre repository</label>
                                 <input id="repositoryURL" type="text" value="{{old("repositoryURL")}}" name="repositoryURL"  class="@error("repositoryURL") is-invalid @enderror" placeholder="URL du repository" >
 

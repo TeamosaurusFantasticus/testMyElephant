@@ -2,7 +2,7 @@
 
     <x-slot name="title">
         <div class="white bgGreen">
-            {{ __('Information du profil') }}
+            {{ __('Informations du profil') }}
         </div>
     </x-slot>
 

@@ -28,7 +28,7 @@
                 @foreach ($finalResult as $vulnerability)
                     <div class="containerVuln">
                         <div class="report">
-                            <h2 class="vulnTitle">Vulnerabilité n°{{$numberOfVuln}}</h2>
+                            <h2 class="vulnTitle">Vulnérabilité n°{{$numberOfVuln}}</h2>
                             <div class="vulnDetails">
                                 <div class="vul_Type--container">
                                     <h2>Type</h2>
